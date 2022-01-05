@@ -18,7 +18,7 @@ class _MyHomePageState extends State<MyHomePage> {
       
       body: Column(
         children: [
-          Header(menuOpenClose: menuToggle),
+          Header(menuToggle: menuToggle),
           Expanded(
             flex: 5,
             child: Row(

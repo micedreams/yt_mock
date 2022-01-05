@@ -50,3 +50,21 @@ class BuildDivider extends StatelessWidget {
     );
   }
 }
+
+class MyIcon extends StatelessWidget {
+  final icon;
+
+  const MyIcon({
+    required this.icon,
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Icon(
+      icon,
+      color: Colors.white,
+      size: iconSize,
+    );
+  }
+}
