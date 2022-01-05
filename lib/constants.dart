@@ -36,17 +36,17 @@ class WidthSpacer extends StatelessWidget {
 
 class BuildDivider extends StatelessWidget {
   final double myThickness;
-  final Color myColor;
 
-  const BuildDivider(
-      {Key? key, required this.myThickness, required this.myColor})
-      : super(key: key);
+  const BuildDivider({
+    Key? key,
+    required this.myThickness,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Divider(
       thickness: myThickness,
-      color: myColor,
+      color: accentColor,
     );
   }
 }
@@ -65,6 +65,31 @@ class MyIcon extends StatelessWidget {
       icon,
       color: Colors.white,
       size: iconSize,
+    );
+  }
+}
+
+class BuildMySideBarListTile extends StatelessWidget {
+  final icons;
+  final title;
+
+  const BuildMySideBarListTile({
+    this.icons,
+    required this.title,
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      leading: Icon(
+        icons,
+        color: Colors.white,
+      ),
+      title: Text(
+        title,
+        style: const TextStyle(color: Colors.white, fontSize: 15.00),
+      ),
     );
   }
 }

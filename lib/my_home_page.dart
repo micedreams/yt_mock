@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:yt_mock/headers.dart';
+import 'package:yt_mock/side_menu.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
@@ -15,7 +16,6 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
       body: Column(
         children: [
           Header(menuToggle: menuToggle),
@@ -23,7 +23,7 @@ class _MyHomePageState extends State<MyHomePage> {
             flex: 5,
             child: Row(
               children: [
-                 menu? const Text("sideBar"):SizedBox.shrink(),
+                menu ? const SideMenu() : const SizedBox.shrink(),
                 Expanded(
                   flex: 5,
                   child: Column(
