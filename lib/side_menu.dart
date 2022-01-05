@@ -25,6 +25,7 @@ class _SideMenuState extends State<SideMenu> {
 
   Widget buildSideBar() {
     return ListView(
+      shrinkWrap: true,
       controller: ScrollController(),
       physics: const BouncingScrollPhysics(),
       children: [
@@ -103,19 +104,92 @@ class _SideMenuState extends State<SideMenu> {
         const BuildMySideBarListTile(
             title: "YouTube Premium", icons: Icons.slideshow),
         const BuildMySideBarListTile(title: "Movies", icons: Icons.theaters),
-        const BuildMySideBarListTile(title: "Gaming", icons: Icons.sports_esports),
+        const BuildMySideBarListTile(
+            title: "Gaming", icons: Icons.sports_esports),
         const BuildMySideBarListTile(title: "Live", icons: Icons.stream),
         const BuildMySideBarListTile(
             title: "Fashion & Beauty", icons: Icons.checkroom),
         const BuildMySideBarListTile(title: "Learning", icons: Icons.lightbulb),
-        const BuildMySideBarListTile(title: "Sports", icons: Icons.emoji_events),
+        const BuildMySideBarListTile(
+            title: "Sports", icons: Icons.emoji_events),
         const BuildDivider(myThickness: 1),
         const BuildMySideBarListTile(title: "Settings", icons: Icons.settings),
         const BuildMySideBarListTile(
             title: "Report history", icons: Icons.flag_outlined),
         const BuildMySideBarListTile(title: "Help", icons: Icons.help_outline),
-        const BuildMySideBarListTile(title: "Send feedback", icons: Icons.feedback_outlined),
+        const BuildMySideBarListTile(
+            title: "Send feedback", icons: Icons.feedback_outlined),
         const BuildDivider(myThickness: 1),
+        ListView(
+          shrinkWrap: true,
+          padding: const EdgeInsets.all(12.0),
+          children: [
+            Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(right: myPadding),
+                  child: new Text('About'),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(right: myPadding),
+                  child: new Text('Press'),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(right: myPadding),
+                  child: new Text('Copyright'),
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(right: myPadding),
+                  child: new Text('Contact us'),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(right: myPadding),
+                  child: new Text('Creators'),
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(right: myPadding),
+                  child: new Text('Advertise'),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(right: myPadding),
+                  child: new Text('Developers'),
+                ),
+              ],
+            ),
+          ],
+        ),
+        ListView(
+          shrinkWrap: true,
+          padding: const EdgeInsets.all(12.0),
+          children: [
+            Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(right: myPadding),
+                  child: new Text('Terms'),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(right: myPadding),
+                  child: new Text('Privacy'),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(right: 8.0),
+                  child: new Text('Policy & Safety'),
+                ),
+              ],
+            ),
+            new Text('How YouTube works'),
+            new Text('Test new features'),
+          ],
+        ),
       ],
     );
   }
